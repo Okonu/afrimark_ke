@@ -1,70 +1,216 @@
-// Hero.jsx
 import React from 'react';
 
 const Hero = () => {
     return (
         <section style={{
-            background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=2000&auto=format&fit=crop")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            color: 'white',
-            height: '100vh',
+            position: 'relative',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
-            textAlign: 'center',
-            paddingTop: '70px'
+            minHeight: '100vh',
+            background: `
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url("https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=2000&auto=format&fit=crop")
+            `,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            color: 'white',
+            overflow: 'hidden',
+            padding: '0 5%'
         }}>
+            {/* Animated Grid Overlay */}
             <div style={{
-                width: '90%',
-                maxWidth: '1200px',
-                margin: '0 auto'
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: `
+                    repeating-linear-gradient(
+                        0deg,
+                        transparent,
+                        transparent 50px,
+                        rgba(255,255,255,0.02) 50px,
+                        rgba(255,255,255,0.02) 100px
+                    ),
+                    repeating-linear-gradient(
+                        90deg,
+                        transparent,
+                        transparent 50px,
+                        rgba(255,255,255,0.02) 50px,
+                        rgba(255,255,255,0.02) 100px
+                    )
+                `,
+                opacity: 0.1,
+                zIndex: 1,
+                pointerEvents: 'none'
+            }}></div>
+
+            {/* Content Container */}
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                width: '100%',
+                maxWidth: '1400px',
+                margin: '0 auto',
+                position: 'relative',
+                zIndex: 2
             }}>
+                {/* Text Content */}
                 <div style={{
-                    maxWidth: '700px',
-                    margin: '0 auto',
-                    padding: '30px',
-                    // backgroundColor: 'rgba(0, 0, 0, 0.5)',5
-                    borderRadius: '10px'
+                    flex: '0 0 60%',
+                    backdropFilter: 'blur(10px)',
+                    backgroundColor: 'rgba(255,255,255,0.05)',
+                    padding: '40px',
+                    borderRadius: '20px',
+                    border: '1px solid rgba(255,255,255,0.1)'
                 }}>
-                    <h1 style={{
-                        fontSize: '2.5rem',
+                    <div style={{
+                        display: 'inline-block',
+                        backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                        color: '#4CAF50',
+                        padding: '8px 16px',
+                        borderRadius: '20px',
                         marginBottom: '20px',
-                        fontWeight: 700
-                    }}>Navigating Trade and Credit Shouldn't Be a Gamble</h1>
+                        fontSize: '0.9rem',
+                        fontWeight: 600,
+                        border: '1px solid rgba(76, 175, 80, 0.3)'
+                    }}>
+                        Enterprise Trade Intelligence
+                    </div>
+
+                    <h1 style={{
+                        fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+                        marginBottom: '25px',
+                        lineHeight: '1.2',
+                        fontWeight: 800,
+                        background: 'linear-gradient(95deg, #ffffff 30%, #b0bec5 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                    }}>
+                        Navigating Trade and Credit Shouldn't Be a Gamble
+                    </h1>
 
                     <p style={{
-                        fontSize: '1.2rem',
-                        marginBottom: '40px'
-                    }}>For SMEs, cash flow is oxygen—and we're here to help you breathe easier. Our platform transforms everyday trade data into actionable insights.</p>
+                        fontSize: 'clamp(1rem, 3vw, 1.2rem)',
+                        color: 'rgba(255,255,255,0.85)',
+                        marginBottom: '35px',
+                        maxWidth: '600px',
+                        lineHeight: '1.6'
+                    }}>
+                        For SMEs, cash flow is oxygen—and we're here to help you breathe easier. Our platform transforms everyday trade data into actionable insights.
+                    </p>
 
                     <div style={{
                         display: 'flex',
-                        justifyContent: 'center',
-                        gap: '15px',
-                        flexWrap: 'wrap'
+                        alignItems: 'center',
+                        gap: '20px'
                     }}>
                         <a href="#contact" style={{
                             backgroundColor: '#4CAF50',
                             color: 'white',
-                            padding: '12px 25px',
-                            borderRadius: '5px',
+                            padding: '14px 30px',
+                            borderRadius: '10px',
                             textDecoration: 'none',
-                            fontWeight: 600
-                        }}>Get Started</a>
+                            fontWeight: 700,
+                            fontSize: '1rem',
+                            transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                            boxShadow: '0 10px 20px rgba(76, 175, 80, 0.3)',
+                            position: 'relative',
+                            overflow: 'hidden',
+                            transform: 'perspective(1000px) translateZ(0)',
+                            willChange: 'transform'
+                        }}
+                           onMouseEnter={(e) => {
+                               e.target.style.transform = 'perspective(1000px) translateY(-10px) translateZ(50px)';
+                               e.target.style.boxShadow = '0 20px 30px rgba(76, 175, 80, 0.4)';
+                           }}
+                           onMouseLeave={(e) => {
+                               e.target.style.transform = 'perspective(1000px) translateY(0) translateZ(0)';
+                               e.target.style.boxShadow = '0 10px 20px rgba(76, 175, 80, 0.3)';
+                           }}>
+                            Get Started
+                        </a>
 
                         <a href="#features" style={{
-                            backgroundColor: 'transparent',
                             color: 'white',
-                            padding: '10px 25px',
-                            borderRadius: '5px',
+                            padding: '14px 30px',
+                            borderRadius: '10px',
                             textDecoration: 'none',
-                            fontWeight: 600,
-                            border: '2px solid white'
-                        }}>Learn More</a>
+                            fontWeight: 700,
+                            fontSize: '1rem',
+                            border: '2px solid rgba(255,255,255,0.3)',
+                            transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                            backgroundColor: 'transparent',
+                            transform: 'perspective(1000px) translateZ(0)',
+                            willChange: 'transform'
+                        }}
+                           onMouseEnter={(e) => {
+                               e.target.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                               e.target.style.transform = 'perspective(1000px) translateY(-10px) translateZ(50px)';
+                               e.target.style.borderColor = 'rgba(255,255,255,0.5)';
+                           }}
+                           onMouseLeave={(e) => {
+                               e.target.style.backgroundColor = 'transparent';
+                               e.target.style.transform = 'perspective(1000px) translateY(0) translateZ(0)';
+                               e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                           }}>
+                            Learn More
+                        </a>
                     </div>
                 </div>
+
+                {/* Graphic Element */}
+                <div style={{
+                    flex: '0 0 35%',
+                    position: 'relative',
+                    height: '500px'
+                }}>
+                    <div style={{
+                        position: 'absolute',
+                        width: '400px',
+                        height: '400px',
+                        background: 'linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%)',
+                        borderRadius: '50%',
+                        filter: 'blur(120px)',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        opacity: 0.6
+                    }}></div>
+                </div>
+            </div>
+
+            {/* Subtle Particle Effect */}
+            <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                pointerEvents: 'none',
+                overflow: 'hidden',
+                zIndex: 3,
+                opacity: 0.3
+            }}>
+                {[...Array(50)].map((_, i) => (
+                    <div key={i} style={{
+                        position: 'absolute',
+                        width: '2px',
+                        height: '2px',
+                        backgroundColor: 'rgba(255,255,255,0.5)',
+                        borderRadius: '50%',
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`,
+                        animation: `float ${2 + Math.random() * 3}s ease-in-out infinite alternate`
+                    }} />
+                ))}
+                <style>{`
+                    @keyframes float {
+                        from { transform: translateY(0); }
+                        to { transform: translateY(-20px); }
+                    }
+                `}</style>
             </div>
         </section>
     );

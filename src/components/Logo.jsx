@@ -44,7 +44,6 @@ const Logo = ({ inverted = false, layout = "stacked" }) => {
         );
     }
 
-    // Stacked layout (for footer): Logo image with text below
     return (
         <div style={{
             textAlign: 'center'

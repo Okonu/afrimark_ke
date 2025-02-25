@@ -1,4 +1,3 @@
-// Header.jsx
 import React, { useState } from 'react';
 import Logo from './Logo';
 
@@ -7,48 +6,93 @@ const Header = () => {
 
     return (
         <header style={{
-            backgroundColor: 'white',
-            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
             position: 'fixed',
             width: '100%',
             zIndex: 1000,
-            padding: '15px 0'
+            top: '20px',
+            left: 0,
+            right: 0
         }}>
             <div style={{
-                width: '90%',
+                width: 'calc(100% - 40px)',
                 maxWidth: '1200px',
                 margin: '0 auto',
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                borderRadius: '50px',
+                padding: '15px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+                backdropFilter: 'blur(10px)',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center'
             }}>
-                {/* Use horizontal layout for header */}
                 <Logo layout="horizontal" />
 
-                <nav style={{ display: 'flex', gap: '20px' }}>
+                <nav style={{
+                    display: 'flex',
+                    gap: '30px',
+                    alignItems: 'center'
+                }}>
                     <a href="#features" style={{
                         textDecoration: 'none',
                         color: '#333',
-                        fontWeight: 500
-                    }}>Features</a>
+                        fontWeight: 500,
+                        transition: 'color 0.3s ease',
+                        position: 'relative'
+                    }}
+                       onMouseEnter={(e) => {
+                           e.target.style.color = '#4CAF50';
+                       }}
+                       onMouseLeave={(e) => {
+                           e.target.style.color = '#333';
+                       }}>
+                        Features
+                    </a>
                     <a href="#benefits" style={{
                         textDecoration: 'none',
                         color: '#333',
-                        fontWeight: 500
-                    }}>Benefits</a>
+                        fontWeight: 500,
+                        transition: 'color 0.3s ease',
+                        position: 'relative'
+                    }}
+                       onMouseEnter={(e) => {
+                           e.target.style.color = '#4CAF50';
+                       }}
+                       onMouseLeave={(e) => {
+                           e.target.style.color = '#333';
+                       }}>
+                        Benefits
+                    </a>
+                    {/*<a href="/team" style={{*/}
+                    {/*    textDecoration: 'none',*/}
+                    {/*    color: '#333',*/}
+                    {/*    fontWeight: 500,*/}
+                    {/*    transition: 'color 0.3s ease',*/}
+                    {/*    position: 'relative'*/}
+                    {/*}}*/}
+                    {/*   onMouseEnter={(e) => {*/}
+                    {/*       e.target.style.color = '#4CAF50';*/}
+                    {/*   }}*/}
+                    {/*   onMouseLeave={(e) => {*/}
+                    {/*       e.target.style.color = '#333';*/}
+                    {/*   }}>*/}
+                    {/*    Team*/}
+                    {/*</a>*/}
                     <a href="#about" style={{
                         textDecoration: 'none',
                         color: '#333',
-                        fontWeight: 500
-                    }}>About</a>
-                    <a href="#contact" style={{
-                        backgroundColor: '#4CAF50',
-                        color: 'white',
-                        padding: '10px 20px',
-                        borderRadius: '5px',
-                        textDecoration: 'none',
-                        fontWeight: 600
-                    }}>Get Started</a>
+                        fontWeight: 500,
+                        transition: 'color 0.3s ease',
+                        position: 'relative'
+                    }}
+                       onMouseEnter={(e) => {
+                           e.target.style.color = '#4CAF50';
+                       }}
+                       onMouseLeave={(e) => {
+                           e.target.style.color = '#333';
+                       }}>
+                        About
+                    </a>
                 </nav>
             </div>
         </header>

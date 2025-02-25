@@ -1,4 +1,3 @@
-// Footer.jsx
 import React from 'react';
 import Logo from './Logo';
 import FooterColumn from './FooterColumn';
@@ -12,7 +11,7 @@ const Footer = () => {
         ],
         company: [
             { name: "About Us", href: "#about" },
-            { name: "Team", href: "#" },
+            { name: "Team", href: "/team" },
             { name: "Careers", href: "#" }
         ],
         resources: [
@@ -24,14 +23,35 @@ const Footer = () => {
 
     return (
         <footer style={{
-            backgroundColor: '#222',
+            position: 'relative',
+            backgroundColor: '#121622',
             color: 'white',
-            padding: '60px 0 30px'
+            padding: '100px 0 50px',
+            overflow: 'hidden'
         }}>
+            {/* Background Pattern */}
             <div style={{
-                width: '90%',
-                maxWidth: '1200px',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: `
+                    radial-gradient(circle at 30% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 20%, rgba(41, 128, 185, 0.1) 0%, transparent 50%)
+                `,
+                opacity: 0.5,
+                zIndex: 1,
+                pointerEvents: 'none'
+            }}></div>
+
+            <div style={{
+                width: '100%',
+                maxWidth: '1400px',
                 margin: '0 auto',
+                padding: '0 5%',
+                position: 'relative',
+                zIndex: 2,
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                 gap: '40px'
@@ -39,9 +59,8 @@ const Footer = () => {
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center'
+                    alignItems: 'flex-start'
                 }}>
-                    {/* Just the logo image, larger size */}
                     <div style={{
                         width: '180px',
                         height: 'auto',
@@ -59,9 +78,43 @@ const Footer = () => {
                         />
                     </div>
                     <p style={{
-                        color: '#aaa',
-                        textAlign: 'center'
-                    }}>Building Africa's trust infrastructure for SMEs.</p>
+                        color: 'rgba(255,255,255,0.7)',
+                        lineHeight: '1.6',
+                        marginBottom: '20px'
+                    }}>
+                        Building Africa's trust infrastructure for SMEs.
+                    </p>
+                    <div style={{
+                        display: 'flex',
+                        gap: '15px'
+                    }}>
+                        {/* Social Media Icons */}
+                        {[
+                            { name: 'Twitter', href: '#', icon: 'T' },
+                            { name: 'LinkedIn', href: '#', icon: 'L' },
+                            { name: 'Facebook', href: '#', icon: 'F' }
+                        ].map((social) => (
+                            <a
+                                key={social.name}
+                                href={social.href}
+                                style={{
+                                    color: 'rgba(255,255,255,0.5)',
+                                    transition: 'all 0.3s ease',
+                                    textDecoration: 'none'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.target.style.color = '#4CAF50';
+                                    e.target.style.transform = 'translateY(-5px)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.target.style.color = 'rgba(255,255,255,0.5)';
+                                    e.target.style.transform = 'translateY(0)';
+                                }}
+                            >
+                                {social.icon}
+                            </a>
+                        ))}
+                    </div>
                 </div>
 
                 <FooterColumn title="Product" links={footerLinks.product} />
@@ -70,14 +123,14 @@ const Footer = () => {
             </div>
 
             <div style={{
-                borderTop: '1px solid #444',
-                marginTop: '40px',
-                paddingTop: '20px',
+                borderTop: '1px solid rgba(255,255,255,0.1)',
+                marginTop: '60px',
+                paddingTop: '30px',
                 textAlign: 'center',
-                color: '#aaa',
+                color: 'rgba(255,255,255,0.5)',
                 width: '90%',
-                maxWidth: '1200px',
-                margin: '40px auto 0'
+                maxWidth: '1400px',
+                margin: '0 auto'
             }}>
                 <p>&copy; {new Date().getFullYear()} Afrimark. All rights reserved.</p>
             </div>
