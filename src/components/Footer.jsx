@@ -1,4 +1,5 @@
 // Footer.jsx
+import React from 'react';
 import Logo from './Logo';
 import FooterColumn from './FooterColumn';
 
@@ -35,14 +36,31 @@ const Footer = () => {
                 gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                 gap: '40px'
             }}>
-                <div>
-                    {/* Using the inverted logo for dark backgrounds */}
-                    <div style={{ maxWidth: '160px' }}>
-                        <Logo inverted={true} />
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center'
+                }}>
+                    {/* Just the logo image, larger size */}
+                    <div style={{
+                        width: '180px',
+                        height: 'auto',
+                        marginBottom: '20px'
+                    }}>
+                        <img
+                            src="/afrimark-logo.png"
+                            alt="Afrimark - Trust is Earned"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                objectFit: 'contain',
+                                filter: 'brightness(0) invert(1)' // Make it white for dark background
+                            }}
+                        />
                     </div>
                     <p style={{
                         color: '#aaa',
-                        marginTop: '20px'
+                        textAlign: 'center'
                     }}>Building Africa's trust infrastructure for SMEs.</p>
                 </div>
 

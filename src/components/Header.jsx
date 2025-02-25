@@ -1,5 +1,6 @@
+// Header.jsx
+import React, { useState } from 'react';
 import Logo from './Logo';
-import { useState } from 'react';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,8 @@ const Header = () => {
                 justifyContent: 'space-between',
                 alignItems: 'center'
             }}>
-                <Logo />
+                {/* Use horizontal layout for header */}
+                <Logo layout="horizontal" />
 
                 <nav style={{ display: 'flex', gap: '20px' }}>
                     <a href="#features" style={{
