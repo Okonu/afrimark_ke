@@ -88,32 +88,32 @@ const Footer = () => {
                         display: 'flex',
                         gap: '15px'
                     }}>
-                        {/* Social Media Icons */}
-                        {[
-                            { name: 'Twitter', href: '#', icon: 'T' },
-                            { name: 'LinkedIn', href: '#', icon: 'L' },
-                            { name: 'Facebook', href: '#', icon: 'F' }
-                        ].map((social) => (
-                            <a
-                                key={social.name}
-                                href={social.href}
-                                style={{
-                                    color: 'rgba(255,255,255,0.5)',
-                                    transition: 'all 0.3s ease',
-                                    textDecoration: 'none'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.target.style.color = '#4CAF50';
-                                    e.target.style.transform = 'translateY(-5px)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.target.style.color = 'rgba(255,255,255,0.5)';
-                                    e.target.style.transform = 'translateY(0)';
-                                }}
-                            >
-                                {social.icon}
-                            </a>
-                        ))}
+                        {/*/!* Social Media Icons *!/*/}
+                        {/*{[*/}
+                        {/*    { name: 'Twitter', href: '#', icon: 'T' },*/}
+                        {/*    { name: 'LinkedIn', href: '#', icon: 'L' },*/}
+                        {/*    { name: 'Facebook', href: '#', icon: 'F' }*/}
+                        {/*].map((social) => (*/}
+                        {/*    <a*/}
+                        {/*        key={social.name}*/}
+                        {/*        href={social.href}*/}
+                        {/*        style={{*/}
+                        {/*            color: 'rgba(255,255,255,0.5)',*/}
+                        {/*            transition: 'all 0.3s ease',*/}
+                        {/*            textDecoration: 'none'*/}
+                        {/*        }}*/}
+                        {/*        onMouseEnter={(e) => {*/}
+                        {/*            e.target.style.color = '#4CAF50';*/}
+                        {/*            e.target.style.transform = 'translateY(-5px)';*/}
+                        {/*        }}*/}
+                        {/*        onMouseLeave={(e) => {*/}
+                        {/*            e.target.style.color = 'rgba(255,255,255,0.5)';*/}
+                        {/*            e.target.style.transform = 'translateY(0)';*/}
+                        {/*        }}*/}
+                        {/*    >*/}
+                        {/*        {social.icon}*/}
+                        {/*    </a>*/}
+                        {/*))}*/}
                     </div>
                 </div>
 
