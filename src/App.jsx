@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+// File: src/App.jsx
+import React from 'react';
+import { useRouter } from './utils/router';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -9,28 +11,6 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import TermsAndConditions from './components/TermsAndConditions';
 import PrivacyPolicy from './components/PrivacyPolicy';
-
-// Simple router hook
-const useRouter = () => {
-    const [currentPath, setCurrentPath] = useState(window.location.pathname);
-
-    useEffect(() => {
-        const handlePopstate = () => {
-            setCurrentPath(window.location.pathname);
-        };
-
-        window.addEventListener('popstate', handlePopstate);
-        return () => window.removeEventListener('popstate', handlePopstate);
-    }, []);
-
-    const navigate = (path) => {
-        window.history.pushState({}, '', path);
-        setCurrentPath(path);
-        window.scrollTo(0, 0); // Scroll to top on navigation
-    };
-
-    return { currentPath, navigate };
-};
 
 // HomePage component
 const HomePage = () => {
