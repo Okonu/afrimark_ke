@@ -4,6 +4,53 @@ import Logo from './Logo';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        
+        const currentPath = window.location.pathname;
+        
+        if (href.startsWith('#')) {
+            if (currentPath === '/') {
+                const element = document.querySelector(href);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                sessionStorage.setItem('scrollTarget', href);
+                
+                window.history.pushState({}, '', '/');
+                
+                window.dispatchEvent(new CustomEvent('routechange'));
+                
+                setTimeout(() => {
+                    const element = document.querySelector(href);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    sessionStorage.removeItem('scrollTarget');
+                }, 100);
+            }
+        } else {
+            window.history.pushState({}, '', href);
+            window.dispatchEvent(new CustomEvent('routechange'));
+            window.scrollTo(0, 0);
+        }
+    };
+
+    const handleLogoClick = (e) => {
+        e.preventDefault();
+        
+        const currentPath = window.location.pathname;
+        
+        if (currentPath !== '/') {
+            window.history.pushState({}, '', '/');
+            window.dispatchEvent(new CustomEvent('routechange'));
+            window.scrollTo(0, 0);
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
+
     return (
         <header style={{
             position: 'fixed',
@@ -26,71 +73,73 @@ const Header = () => {
                 justifyContent: 'space-between',
                 alignItems: 'center'
             }}>
-                <Logo layout="horizontal" />
+                <div onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
+                    <Logo layout="horizontal" />
+                </div>
 
                 <nav style={{
                     display: 'flex',
                     gap: '30px',
                     alignItems: 'center'
                 }}>
-                    <a href="#features" style={{
-                        textDecoration: 'none',
-                        color: '#333',
-                        fontWeight: 500,
-                        transition: 'color 0.3s ease',
-                        position: 'relative'
-                    }}
-                       onMouseEnter={(e) => {
-                           e.target.style.color = '#4CAF50';
-                       }}
-                       onMouseLeave={(e) => {
-                           e.target.style.color = '#333';
-                       }}>
+                    <a 
+                        href="#features" 
+                        onClick={(e) => handleNavClick(e, '#features')}
+                        style={{
+                            textDecoration: 'none',
+                            color: '#333',
+                            fontWeight: 500,
+                            transition: 'color 0.3s ease',
+                            position: 'relative',
+                            cursor: 'pointer'
+                        }}
+                        onMouseEnter={(e) => {
+                            e.target.style.color = '#4CAF50';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.target.style.color = '#333';
+                        }}
+                    >
                         Features
                     </a>
-                    <a href="#benefits" style={{
-                        textDecoration: 'none',
-                        color: '#333',
-                        fontWeight: 500,
-                        transition: 'color 0.3s ease',
-                        position: 'relative'
-                    }}
-                       onMouseEnter={(e) => {
-                           e.target.style.color = '#4CAF50';
-                       }}
-                       onMouseLeave={(e) => {
-                           e.target.style.color = '#333';
-                       }}>
+                    <a 
+                        href="#benefits" 
+                        onClick={(e) => handleNavClick(e, '#benefits')}
+                        style={{
+                            textDecoration: 'none',
+                            color: '#333',
+                            fontWeight: 500,
+                            transition: 'color 0.3s ease',
+                            position: 'relative',
+                            cursor: 'pointer'
+                        }}
+                        onMouseEnter={(e) => {
+                            e.target.style.color = '#4CAF50';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.target.style.color = '#333';
+                        }}
+                    >
                         Benefits
                     </a>
-                    {/*<a href="/team" style={{*/}
-                    {/*    textDecoration: 'none',*/}
-                    {/*    color: '#333',*/}
-                    {/*    fontWeight: 500,*/}
-                    {/*    transition: 'color 0.3s ease',*/}
-                    {/*    position: 'relative'*/}
-                    {/*}}*/}
-                    {/*   onMouseEnter={(e) => {*/}
-                    {/*       e.target.style.color = '#4CAF50';*/}
-                    {/*   }}*/}
-                    {/*   onMouseLeave={(e) => {*/}
-                    {/*       e.target.style.color = '#333';*/}
-                    {/*   }}>*/}
-                    {/*    Team*/}
-                    {/*</a>*/}
-                    <a href="#about" style={{
-                        textDecoration: 'none',
-                        color: '#333',
-                        fontWeight: 500,
-                        transition: 'color 0.3s ease',
-                        position: 'relative'
-                    }}
-                       onMouseEnter={(e) => {
-                           e.target.style.color = '#4CAF50';
-                       }}
-                       onMouseLeave={(e) => {
-                           e.target.style.color = '#333';
-                       }}>
+                    <a 
+                        href="#about" 
+                        onClick={(e) => handleNavClick(e, '#about')}
+                        style={{
+                            textDecoration: 'none',
+                            color: '#333',
+                            fontWeight: 500,
+                            transition: 'color 0.3s ease',
+                            position: 'relative',
+                            cursor: 'pointer'
+                        }}
+                        onMouseEnter={(e) => {
+                            e.target.style.color = '#4CAF50';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.target.style.color = '#333';
+                        }}
+                    >
                         About
                     </a>
                 </nav>

@@ -437,13 +437,12 @@
       "contacts": [
         {
           "title": "Afrimark",
-          "email": "privacy@afrimark.com",
-          "phone": "+254 (0) 20 123 4567",
+          "email": "hello@afrimark.io",
           "address": "Nairobi, Kenya"
         },
         {
           "title": "Data Protection Officer",
-          "email": "dpo@afrimark.com"
+          "email": "dpo@afrimark.io"
         },
         {
           "title": "Supervisory Authority",

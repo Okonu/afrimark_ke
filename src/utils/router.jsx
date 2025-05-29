@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from 'react';
 
-// Simple router hook
 export const useRouter = () => {
     const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
     useEffect(() => {
+        setCurrentPath(window.location.pathname);
+
         const handlePopstate = () => {
             setCurrentPath(window.location.pathname);
         };
 
+        const handleHashChange = () => {
+            setCurrentPath(window.location.pathname);
+        };
+
         window.addEventListener('popstate', handlePopstate);
-        return () => window.removeEventListener('popstate', handlePopstate);
+        window.addEventListener('hashchange', handleHashChange);
+
+        return () => {
+            window.removeEventListener('popstate', handlePopstate);
+            window.removeEventListener('hashchange', handleHashChange);
+        };
     }, []);
 
     const navigate = (path) => {
-        window.history.pushState({}, '', path);
-        setCurrentPath(path);
-        window.scrollTo(0, 0); // Scroll to top on navigation
+        if (path !== currentPath) {
+            window.history.pushState({}, '', path);
+            setCurrentPath(path);
+            window.scrollTo(0, 0);
+        }
     };
 
     return { currentPath, navigate };
@@ -29,7 +41,6 @@ export const Link = ({ href, children, style, ...props }) => {
     const handleClick = (e) => {
         e.preventDefault();
         if (href.startsWith('#')) {
-            // Handle anchor links
             const element = document.querySelector(href);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });

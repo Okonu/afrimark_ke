@@ -1,23 +1,41 @@
 import React from 'react';
-import { useRouter } from '../utils/router';
 
 const FooterColumn = ({ title, links }) => {
-    const { navigate } = useRouter();
-    
     const handleClick = (e, href) => {
         e.preventDefault();
         
+        const currentPath = window.location.pathname;
+        
         if (href.startsWith('#')) {
-            // Handle anchor links
-            const element = document.querySelector(href);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+            if (currentPath === '/') {
+                const element = document.querySelector(href);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                sessionStorage.setItem('scrollTarget', href);
+                
+                window.history.pushState({}, '', '/');
+                
+                window.dispatchEvent(new CustomEvent('routechange'));
+                
+                setTimeout(() => {
+                    const element = document.querySelector(href);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    sessionStorage.removeItem('scrollTarget');
+                }, 100);
             }
         } else if (href.startsWith('/')) {
-            // Handle internal routing
-            navigate(href);
+            console.log('Navigating to:', href);
+            
+            window.history.pushState({}, '', href);
+            
+            window.dispatchEvent(new CustomEvent('routechange'));
+            
+            window.scrollTo(0, 0);
         } else {
-            // Handle external links
             window.open(href, '_blank', 'noopener,noreferrer');
         }
     };
