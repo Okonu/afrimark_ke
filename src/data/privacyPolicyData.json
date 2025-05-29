@@ -1,0 +1,457 @@
+{
+  "title": "Privacy Policy",
+  "subtitle": "Learn how we collect, use, and protect your personal information.",
+  "lastUpdated": "January 2025",
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "1. INTRODUCTION AND SCOPE",
+      "content": [
+        "Afrimark (\"we,\" \"us,\" or \"our\") is a trusted business trade credit bureau operating in Kenya and across Africa. As a leading information services company, we collect, protect, and provide quality business and consumer credit information, which means we look after significant volumes of personal data. We are committed to using personal data responsibly to make a positive difference to you and society at large.",
+        "This Privacy Notice communicates the processing activities which all data subjects can expect from us, how we secure your personal data, your rights under applicable data privacy legislation, and how you can exercise these privacy rights. This notice is applicable in all instances where Afrimark determines the manner and purpose for which information is processed, i.e., when we are the Data Controller.",
+        "This notice applies to all Data Subjects which may include individuals, consumers, and clients whose Personal Data is processed by Afrimark and explains how we collect, use, and process your personal data as dictated by the circumstances of your relationship with us. Afrimark clients are business entities for the most part, who provide Afrimark Personal Data in line with applicable regulations to perform regulated credit bureau services.",
+        "Unless otherwise stated in a contract, this notice does not form part of any contract you have concluded with us, although Afrimark may refer to this privacy notice in your contract with Afrimark. We may update this notice at any time, but if we do so, we will make a copy of the amended notice available to you as soon as reasonably practical."
+      ]
+    },
+    {
+      "id": "principles",
+      "title": "2. OUR PRIVACY PRINCIPLES",
+      "content": [
+        "Afrimark strives to comply with all applicable Data Privacy legislation. To ensure we respect your right to privacy, we endeavor to adhere to the following principles when processing Personal Data. Personal Data that we hold about you must be:"
+      ],
+      "list": [
+        {
+          "number": "2.1",
+          "text": "Used in a lawful, fair, and transparent manner"
+        },
+        {
+          "number": "2.2",
+          "text": "Collected for lawful purposes and only used in processing activities that are compatible with the lawful purposes"
+        },
+        {
+          "number": "2.3",
+          "text": "Limited to what is necessary for achieving lawful purposes"
+        },
+        {
+          "number": "2.4",
+          "text": "Accurate and up to date"
+        },
+        {
+          "number": "2.5",
+          "text": "Only retained for the period necessary to achieve our purposes for collection and meet any applicable legal obligations"
+        },
+        {
+          "number": "2.6",
+          "text": "Protected from unauthorized access, use, or disclosure"
+        }
+      ]
+    },
+    {
+      "id": "terms",
+      "title": "3. KEY DATA PRIVACY TERMS",
+      "definitions": [
+        {
+          "number": "3.1",
+          "term": "Data Controller",
+          "definition": "refers to the organization(s) that determines the purposes and the manner for processing Personal Data i.e., determines how to collect, store, and use your Personal Data."
+        },
+        {
+          "number": "3.2",
+          "term": "Data Subject(s)",
+          "definition": "refers to any individual(s) from whom or in respect of whom Personal Data has been requested, collected, collated, processed, or stored."
+        },
+        {
+          "number": "3.3",
+          "term": "Personal Data",
+          "definition": "refers to information about an identifiable person, which identifies or relates directly to you. Personal Data includes Business Credit Information."
+        },
+        {
+          "number": "3.4",
+          "term": "Processing",
+          "definition": "refers to the collection, receipt, recording, organization, collation, storage, updating, amendment, retrieval, reading, analyzing, use and/or sharing of your Personal Data in the ways set out in this privacy notice. When we do one or more of these actions with your Personal Data, we are \"Processing\" your Personal Data."
+        },
+        {
+          "number": "3.5",
+          "term": "Special Personal Data",
+          "definition": "categories of particularly sensitive Personal Data, such as health information, religious or philosophical beliefs, political opinion, financial information, and medical records, which require higher levels of protection. We minimize the processing of Special Personal Data to what is strictly necessary to achieve a lawful purpose."
+        },
+        {
+          "number": "3.6",
+          "term": "Business Credit Information",
+          "definition": "means information concerning business credit history, including previous credit applications, positive and negative information relating to credit agreements to which the business is or has been a party, pattern of payment or default under such credit agreements, debt re-arrangement, financial malpractice, and other matters related to the business's financial means, prospects, and obligations."
+        }
+      ]
+    },
+    {
+      "id": "collecting",
+      "title": "4. COLLECTING YOUR PERSONAL DATA",
+      "content": [
+        "When processing Personal Data, Afrimark limits the collection of Personal Data to include only what is permitted under applicable laws and regulations and which is necessary for our clients to make meaningful and accurate credit decisions. We also collect Personal Data of our customers and vendors to comply with contractual obligations, legal requirements, or for operational business purposes.",
+        "Our sources of Personal Data are:"
+      ],
+      "list": [
+        {
+          "number": "4.1",
+          "text": "The Data subject to whom the Personal Data relates"
+        },
+        {
+          "number": "4.2",
+          "text": "Financial institutions regulated by relevant authorities"
+        },
+        {
+          "number": "4.3",
+          "text": "Public sources, like courts of law and business registries"
+        },
+        {
+          "number": "4.4",
+          "text": "Business entities, e.g., Vendors and Creditors"
+        },
+        {
+          "number": "4.5",
+          "text": "Other registered credit bureaus"
+        }
+      ]
+    },
+    {
+      "id": "categories",
+      "title": "5. CATEGORIES OF PERSONAL DATA WE PROCESS, AND THE PURPOSE(S) FOR OUR PROCESSING",
+      "content": [
+        "We need to collect and process certain client Personal Data to conduct our precontract vetting process, deliver the product(s) or service(s) requested, and to facilitate the best possible experience when clients engage with us or use our products and services."
+      ],
+      "dataCategories": [
+        {
+          "category": "Business Credit Information relating to Data Subjects",
+          "purpose": "Make, or assist in making or performing duties in terms of any agreement with clients, performing our duties and responsibilities as a registered credit bureau, as well as complying with legal obligations relating to our business."
+        },
+        {
+          "category": "Information incorporated in a business's credit report",
+          "purpose": "To form a view of Data Subjects as individuals and businesses, to identify, develop or improve products in line with our operations as a credit bureau, that may be of interest to clients, by assisting clients in making credit decisions about businesses, carrying out market research, business and statistical analysis, performing administrative functions, and complying with regulatory and other legal obligations."
+        },
+        {
+          "category": "Names, phone numbers, PIN Numbers, email addresses, payment behavior",
+          "purpose": "Identification of clients, allowing sign-ins, sending notifications to clients and third parties whose data is shared with us, to verify ownership of accounts, and assess creditworthiness."
+        },
+        {
+          "category": "Payment details such as credit card or debit card details, and the value of the transaction",
+          "purpose": "To facilitate payment for our product(s) and services, where the services you request carry a cost."
+        },
+        {
+          "category": "Vendor/Supplier information",
+          "description": "including name(s) and contact details, ID numbers, directors' and senior managers' information, banking details and other financial information",
+          "purpose": "Verifying information and performing necessary checks, performing obligations in agreement with the vendor or managing the business relationships between the parties, payment of invoices, and complying with regulatory and other obligations."
+        },
+        {
+          "category": "Prospective client's information",
+          "description": "including name(s), contact numbers and/or e-mail address, directors' and senior managers' information",
+          "purpose": "Activities relating to the processing of a prospect's information including verifying and updating information, pre-scoring/contractual precontract vetting."
+        },
+        {
+          "category": "Security information which may include security-related verification questions",
+          "purpose": "To facilitate secure use of our platforms, to answer any queries you may have, and effectively identify you when you contact us."
+        },
+        {
+          "category": "Device and technical information",
+          "purpose": "To improve our website functionality, analyze usage patterns, and enhance user experience."
+        }
+      ],
+      "note": "We will only use your Personal Data for the purposes for which we collected it, or a purpose that is reasonably compatible with the original purposes for collection, as indicated above."
+    },
+    {
+      "id": "legal-basis",
+      "title": "6. WHAT IS OUR LEGAL BASIS FOR PROCESSING PERSONAL DATA?",
+      "content": [
+        "We will only process your Personal Data in accordance with applicable Data Privacy laws, which require that we must satisfy at least one prescribed legal basis for processing. Depending on the context of the processing activity, we rely on a number of different conditions for the activities we carry out. The legal basis we rely on include:"
+      ],
+      "list": [
+        {
+          "number": "6.1",
+          "text": "Where we need to perform under an agreement that we have concluded with our client, or to take steps at the request of the data subject e.g., to meet our obligations in terms of a contract we have concluded"
+        },
+        {
+          "number": "6.2",
+          "text": "Where the law authorizes or requires us to do so"
+        },
+        {
+          "number": "6.3",
+          "text": "Processing for compliance with a legal obligation which the Data Subject is subject"
+        },
+        {
+          "number": "6.4",
+          "text": "Where you have consented to such processing"
+        },
+        {
+          "number": "6.5",
+          "text": "In rare cases, we may process your Personal Data where:",
+          "subList": [
+            "We need to process for medical purposes",
+            "We need to do so in the public interest",
+            "If it is necessary for national security",
+            "The information is necessary for prevention, detection, investigation, prosecution, or punishment of an offence or breach of law"
+          ]
+        }
+      ],
+      "note": "Some of the above grounds for processing will overlap, and there may be several grounds which justify our use of your Personal Data."
+    },
+    {
+      "id": "obligation",
+      "title": "7. AM I OBLIGED TO PROVIDE THIS PERSONAL DATA?",
+      "content": [
+        "Below is an explanation of when the processing of your information is voluntary or mandatory, depending on the specific context:"
+      ],
+      "obligations": [
+        {
+          "number": "7.1",
+          "text": "As a registered credit bureau, Afrimark is required by law to collect and process certain Business Credit Information if you are a business with credit accounts. In this instance, you do not have to provide your Credit Information directly, as it will be collected from original sources of Credit Information as allowed by law."
+        },
+        {
+          "number": "7.2",
+          "text": "When you engage with our website, staff, products, or services:",
+          "subList": [
+            {
+              "type": "Website",
+              "text": "The collection of certain Personal Data via essential cookies is necessary for the effective functionality of our website. We obtain your consent when we use non-essential cookies."
+            },
+            {
+              "type": "Engagement with our staff",
+              "text": "When you contact Afrimark for assistance, we will ask you to provide some Personal Data for verification purposes. The provision of this information is not mandatory but a failure to provide such information may negatively affect your ability to do business with Afrimark."
+            },
+            {
+              "type": "Products or services by Afrimark",
+              "text": "When you enquire about or apply for Afrimark products or services, we will ask you to provide some Personal Data for us to enter into an agreement and provide the products and services accordingly."
+            }
+          ]
+        },
+        {
+          "number": "7.3",
+          "text": "Unless required by law, for national security, medical purposes, or to enter into/perform according to an agreement, all provision of Personal Data to Afrimark is voluntary."
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "8. THE SECURITY OF YOUR PERSONAL DATA",
+      "list": [
+        {
+          "number": "8.1",
+          "text": "We take the necessary technical and organizational measures to secure the integrity of information we are responsible for, using accepted technological standards to prevent unauthorized access to or disclosure of your Personal Data. We take all reasonable measures to protect your Personal Data from misuse, loss, alteration, or destruction."
+        },
+        {
+          "number": "8.2",
+          "text": "We have put in place appropriate security measures to protect your Personal Data from accidental loss, unauthorized use, alteration, access, or disclosure. In addition, we limit access to your Personal Data to those employees, agents, contractors, and other third parties who have a business need to access the information. They will only process your Personal Data on our instructions and are subject to a duty of confidentiality."
+        },
+        {
+          "number": "8.3",
+          "text": "We review our information collection, storage, and processing practices, including physical security measures from time to time, to keep up to date with good industry practice and standards. Afrimark has implemented procedures to address any suspected data breaches and will notify any applicable regulator of a breach where legally required to do so. You will also be notified of any breach where required by law."
+        }
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "9. RETENTION OF YOUR PERSONAL DATA",
+      "list": [
+        {
+          "number": "9.1",
+          "text": "We will only retain your Personal Data for as long as necessary to achieve the purposes for which it was collected and processed. We will keep your Personal Data for as long as we need it to provide the Afrimark products and services requested by our client (or by the data subject in limited instances) and no longer. We may also keep it to comply with our legal obligations, resolve any disputes, and enforce our rights."
+        },
+        {
+          "number": "9.2",
+          "text": "Afrimark retains your Personal Data in our credit information database for 10 years in accordance with our stated retention period.",
+          "highlight": true
+        },
+        {
+          "number": "9.3",
+          "text": "We retain certain elements of your information as long as is necessary for the purpose of verifying the integrity of information that we may be required to process in the future or for information quality purposes. This information is securely stored and not used for any other purpose than information quality in support of our obligation to ensure the data we have is relevant and accurate and not duplicated."
+        },
+        {
+          "number": "9.4",
+          "text": "Our reasons for retention may vary from one record or piece of information to the next and depends on the purposes for the storage and related operational business requirements and/or legal obligations, therefore the amount of time we keep your Personal Data for may vary."
+        },
+        {
+          "number": "9.5",
+          "text": "In all cases, our need to use your Personal Data will be reassessed on a regular basis, and information which is no longer required for any purposes will be disposed of."
+        }
+      ]
+    },
+    {
+      "id": "sharing",
+      "title": "10. SHARING YOUR PERSONAL DATA",
+      "content": [
+        "As a general rule, we will only share your Personal Data with those that need access to the information for us to achieve the purpose for which we have collected it, or to comply with an obligation imposed by law. Internally, we will only share your Personal Data on a \"need-to-know\" basis, i.e., with Employees who need access to the information to perform a task on our behalf.",
+        "We may share your Personal Data with:"
+      ],
+      "list": [
+        "Authorized third parties who have paid to access business credit information",
+        "Service providers who help us operate our business",
+        "Financial institutions and creditors",
+        "Professional advisors (lawyers, accountants, auditors)",
+        "Regulatory authorities and law enforcement agencies as required by law",
+        "Other divisions or companies within the group of companies to which we belong",
+        "An affiliate, in which case we will seek to require the affiliates to honor our privacy policy",
+        "Service providers under contract who help supply certain goods/services or help with parts of our business operations"
+      ],
+      "importantNote": {
+        "type": "warning",
+        "text": "We will not share personal data on our site and shall only share business data. However, if your business is a sole proprietorship or consultancy, we may share data pertaining to you as an individual insofar as it relates to your business relationships and credit histories with parties who request and pay for such information."
+      }
+    },
+    {
+      "id": "transborder",
+      "title": "11. TRANSBORDER FLOW OF INFORMATION",
+      "list": [
+        {
+          "number": "11.1",
+          "text": "We store our Personal Data in Kenya."
+        },
+        {
+          "number": "11.2",
+          "text": "As we operate across Africa, we may transfer personal data to countries outside Kenya. We ensure that such transfers comply with applicable data protection laws by implementing appropriate safeguards, such as:",
+          "subList": [
+            "Standard contractual clauses",
+            "Adequacy decisions where available",
+            "Binding corporate rules, where applicable"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "automated",
+      "title": "12. AUTOMATED DECISION-MAKING AND PROFILING",
+      "content": [
+        "We may use automated systems to assist in evaluating creditworthiness. These systems analyze various factors to generate credit reports and scores. You have the right to:"
+      ],
+      "list": [
+        "Obtain human intervention",
+        "Express your point of view",
+        "Contest decisions made purely by automated means"
+      ]
+    },
+    {
+      "id": "cookies",
+      "title": "13. COOKIES AND SIMILAR TECHNOLOGIES",
+      "content": [
+        "Our website uses cookies and similar technologies to enhance user experience and collect information about how visitors use our website. Essential cookies are necessary for the functionality of our website. We only use non-essential cookies with your consent. For more information, please see our Cookie Policy."
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "14. YOUR RIGHTS",
+      "content": [
+        "Under applicable data protection laws, you have the right to:"
+      ],
+      "rights": [
+        {
+          "number": "14.1",
+          "title": "Request confirmation of Personal Data we hold about you",
+          "description": "This right enables you to get confirmation on the categories of Information we hold about you."
+        },
+        {
+          "number": "14.2",
+          "title": "Request access to your Personal Data",
+          "description": "This enables you to receive a copy of the Personal Data that Afrimark has about you."
+        },
+        {
+          "number": "14.3",
+          "title": "Request correction of the Personal Data that we hold about you",
+          "description": "This enables you to ensure that any incomplete or inaccurate data that Afrimark holds about you is corrected."
+        },
+        {
+          "number": "14.4",
+          "title": "Request erasure of your Personal Data",
+          "description": "This enables you to request that Afrimark delete or remove Personal Data where there is no lawful basis for us continuing to process it. You also have the right to ask us to delete or remove your Personal Data where you have successfully exercised your right to object to processing, or where we are required to erase your Personal Data to comply with applicable law."
+        },
+        {
+          "number": "14.5",
+          "title": "Object to processing of your Personal Data",
+          "description": "This enables you to object to certain types of processing where we are relying on a legitimate interest (or those of a third party)."
+        },
+        {
+          "number": "14.6",
+          "title": "Request restriction of processing your Personal Data",
+          "description": "This enables you to ask us to suspend the processing of your Personal Data in certain scenarios."
+        },
+        {
+          "number": "14.7",
+          "title": "Request the transfer of your Personal Data to another party",
+          "description": "Data portability rights."
+        },
+        {
+          "number": "14.8",
+          "title": "Withdraw consent at any time",
+          "description": "Where we are relying on consent to process your Personal Data. However, this will not affect the lawfulness of any processing carried out before you withdraw your consent."
+        }
+      ],
+      "note": "To exercise these rights, please contact our Data Protection Officer at the contact details provided below."
+    },
+    {
+      "id": "disputes",
+      "title": "15. CREDIT REPORT DISPUTES",
+      "content": [
+        "If you believe information in your credit report is inaccurate or incomplete, you have the right to dispute it. We will investigate and correct any verified inaccuracies."
+      ]
+    },
+    {
+      "id": "maintenance",
+      "title": "16. MAINTENANCE OF YOUR PERSONAL DATA",
+      "list": [
+        {
+          "number": "16.1",
+          "text": "We encourage you to assist us in maintaining the accuracy of Personal Data by notifying us of any changes or by meeting your legal obligations regarding disputes lodged."
+        },
+        {
+          "number": "16.2",
+          "text": "Where Afrimark is the Data Controller, and you do not agree with the accuracy of your Personal Data which Afrimark has on file, we have procedures to ensure that such information is verified, and, where appropriate, amended or corrected."
+        }
+      ]
+    },
+    {
+      "id": "children",
+      "title": "17. CHILDREN'S PRIVACY",
+      "content": [
+        "Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal data from children."
+      ]
+    },
+    {
+      "id": "complaints",
+      "title": "18. QUERIES AND COMPLAINTS",
+      "list": [
+        {
+          "number": "18.1",
+          "text": "If you have questions about our privacy notice or wish to contact us, please contact our Data Protection Officer at the contact details provided below."
+        },
+        {
+          "number": "18.2",
+          "text": "Should your query not be resolved to your satisfaction, you may contact our escalation contact at the details provided below."
+        },
+        {
+          "number": "18.3",
+          "text": "Where the above channels have not addressed your query or complaint appropriately, you have the right to make a complaint at any time to the government body/regulator responsible for enforcement of Privacy laws (e.g., the Office of the Data Protection Commissioner in Kenya)."
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "19. CONTACT US",
+      "content": [
+        "If you have any questions or concerns about this Privacy Notice or our data practices, please contact us at:"
+      ],
+      "contacts": [
+        {
+          "title": "Afrimark",
+          "email": "privacy@afrimark.com",
+          "phone": "+254 (0) 20 123 4567",
+          "address": "Nairobi, Kenya"
+        },
+        {
+          "title": "Data Protection Officer",
+          "email": "dpo@afrimark.com"
+        },
+        {
+          "title": "Supervisory Authority",
+          "name": "Office of the Data Protection Commissioner",
+          "website": "www.odpc.go.ke",
+          "email": "info@odpc.go.ke"
+        }
+      ]
+    }
+  ]
+}
