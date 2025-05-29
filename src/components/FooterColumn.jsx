@@ -1,26 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
-// Simple router hook (duplicate from App.jsx for use in FooterColumn)
-const useRouter = () => {
-    const [currentPath, setCurrentPath] = useState(window.location.pathname);
-
-    useEffect(() => {
-        const handlePopstate = () => {
-            setCurrentPath(window.location.pathname);
-        };
-
-        window.addEventListener('popstate', handlePopstate);
-        return () => window.removeEventListener('popstate', handlePopstate);
-    }, []);
-
-    const navigate = (path) => {
-        window.history.pushState({}, '', path);
-        setCurrentPath(path);
-        window.scrollTo(0, 0); // Scroll to top on navigation
-    };
-
-    return { currentPath, navigate };
-};
+import React from 'react';
+import { useRouter } from '../utils/router';
 
 const FooterColumn = ({ title, links }) => {
     const { navigate } = useRouter();
