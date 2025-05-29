@@ -17,7 +17,12 @@ const Footer = () => {
         resources: [
             { name: "Blog", href: "#" },
             { name: "Support", href: "#" },
-            { name: "Privacy Policy", href: "#" }
+            { name: "Help Center", href: "#" }
+        ],
+        legal: [
+            { name: "Terms & Conditions", href: "/terms" },
+            { name: "Privacy Policy", href: "/privacy" },
+            { name: "Cookie Policy", href: "#" }
         ]
     };
 
@@ -88,7 +93,7 @@ const Footer = () => {
                         display: 'flex',
                         gap: '15px'
                     }}>
-                        {/*/!* Social Media Icons *!/*/}
+                        {/* Social Media Icons - commented out for now */}
                         {/*{[*/}
                         {/*    { name: 'Twitter', href: '#', icon: 'T' },*/}
                         {/*    { name: 'LinkedIn', href: '#', icon: 'L' },*/}
@@ -120,6 +125,7 @@ const Footer = () => {
                 <FooterColumn title="Product" links={footerLinks.product} />
                 <FooterColumn title="Company" links={footerLinks.company} />
                 <FooterColumn title="Resources" links={footerLinks.resources} />
+                <FooterColumn title="Legal" links={footerLinks.legal} />
             </div>
 
             <div style={{
@@ -130,7 +136,7 @@ const Footer = () => {
                 color: 'rgba(255,255,255,0.5)',
                 width: '90%',
                 maxWidth: '1400px',
-                margin: '0 auto'
+                margin: '60px auto 0'
             }}>
                 <p>&copy; {new Date().getFullYear()} Afrimark. All rights reserved.</p>
             </div>
