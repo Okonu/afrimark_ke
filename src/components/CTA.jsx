@@ -91,7 +91,7 @@ const CTA = () => {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                 }}>
-                    MVP Coming Soon
+                    Get Early Access
                 </h2>
                 <p style={{
                     fontSize: 'clamp(1rem, 3vw, 1.2rem)',

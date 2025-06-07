@@ -19,11 +19,11 @@ const HomePage = () => {
         }}>
             <Header />
             <Hero />
+            <CTA />
             <Features />
             <Benefits />
             <Stats />
             <HowItWorks />
-            <CTA />
             <Footer />
         </div>
     );
