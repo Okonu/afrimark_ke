@@ -4,7 +4,7 @@ const Button = ({ children, href, primary, secondary, className }) => {
     let buttonClasses = baseClasses;
 
     if (primary) {
-        buttonClasses += " bg-green-600 hover:bg-green-700 text-white";
+        buttonClasses += " bg-orange-600 hover:bg-orange-700 text-white";
     } else if (secondary) {
         buttonClasses += " border border-white text-white hover:bg-white hover:text-gray-900";
     }

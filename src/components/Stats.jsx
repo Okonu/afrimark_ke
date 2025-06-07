@@ -3,7 +3,7 @@ const Stats = () => {
         <section style={{
             position: 'relative',
             padding: '100px 0',
-            background: 'linear-gradient(135deg, #121622 0%, #1E2537 100%)',
+            background: 'linear-gradient(135deg, #2C3E50 0%, #34495E 100%)',
             color: 'white',
             overflow: 'hidden'
         }}>
@@ -15,8 +15,8 @@ const Stats = () => {
                 right: 0,
                 bottom: 0,
                 background: `
-                    radial-gradient(circle at 30% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
-                    radial-gradient(circle at 70% 20%, rgba(41, 128, 185, 0.1) 0%, transparent 50%)
+                    radial-gradient(circle at 30% 80%, rgba(255, 87, 34, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 20%, rgba(44, 62, 80, 0.1) 0%, transparent 50%)
                 `,
                 opacity: 0.5,
                 zIndex: 1,
@@ -63,9 +63,9 @@ const Stats = () => {
                         <div style={{
                             fontSize: '3rem',
                             fontWeight: 'bold',
-                            color: '#4CAF50',
+                            color: '#FF5722',
                             marginBottom: '15px',
-                            background: 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)',
+                            background: 'linear-gradient(135deg, #FF5722 0%, #E64A19 100%)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent'
                         }}>

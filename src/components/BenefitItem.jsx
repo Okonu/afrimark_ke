@@ -23,13 +23,13 @@ const BenefitItem = ({ title, description }) => {
                 width: '50px',
                 height: '50px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)',
+                background: 'linear-gradient(135deg, #FF5722 0%, #E64A19 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginRight: '20px',
                 flexShrink: 0,
-                boxShadow: '0 8px 20px rgba(76, 175, 80, 0.3)'
+                boxShadow: '0 8px 20px rgba(255, 87, 34, 0.3)'
             }}>
                 <span style={{
                     color: 'white',

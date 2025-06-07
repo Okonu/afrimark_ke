@@ -3,9 +3,9 @@ import React from 'react';
 const FooterColumn = ({ title, links }) => {
     const handleClick = (e, href) => {
         e.preventDefault();
-        
+
         const currentPath = window.location.pathname;
-        
+
         if (href.startsWith('#')) {
             if (currentPath === '/') {
                 const element = document.querySelector(href);
@@ -14,11 +14,11 @@ const FooterColumn = ({ title, links }) => {
                 }
             } else {
                 sessionStorage.setItem('scrollTarget', href);
-                
+
                 window.history.pushState({}, '', '/');
-                
+
                 window.dispatchEvent(new CustomEvent('routechange'));
-                
+
                 setTimeout(() => {
                     const element = document.querySelector(href);
                     if (element) {
@@ -29,11 +29,11 @@ const FooterColumn = ({ title, links }) => {
             }
         } else if (href.startsWith('/')) {
             console.log('Navigating to:', href);
-            
+
             window.history.pushState({}, '', href);
-            
+
             window.dispatchEvent(new CustomEvent('routechange'));
-            
+
             window.scrollTo(0, 0);
         } else {
             window.open(href, '_blank', 'noopener,noreferrer');
@@ -57,7 +57,7 @@ const FooterColumn = ({ title, links }) => {
                     left: 0,
                     width: '40px',
                     height: '3px',
-                    backgroundColor: '#4CAF50',
+                    backgroundColor: '#FF5722',
                     borderRadius: '2px'
                 }}></div>
             </h4>
@@ -69,8 +69,8 @@ const FooterColumn = ({ title, links }) => {
                     <li key={index} style={{
                         marginBottom: '12px'
                     }}>
-                        <a 
-                            href={link.href} 
+                        <a
+                            href={link.href}
                             onClick={(e) => handleClick(e, link.href)}
                             style={{
                                 textDecoration: 'none',
@@ -81,7 +81,7 @@ const FooterColumn = ({ title, links }) => {
                                 cursor: 'pointer'
                             }}
                             onMouseEnter={(e) => {
-                                e.target.style.color = '#4CAF50';
+                                e.target.style.color = '#FF5722';
                                 e.target.style.paddingLeft = '20px';
                             }}
                             onMouseLeave={(e) => {

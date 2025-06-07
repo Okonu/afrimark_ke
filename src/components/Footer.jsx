@@ -29,7 +29,7 @@ const Footer = () => {
     return (
         <footer style={{
             position: 'relative',
-            backgroundColor: '#121622',
+            backgroundColor: '#2C3E50',
             color: 'white',
             padding: '100px 0 50px',
             overflow: 'hidden'
@@ -42,8 +42,8 @@ const Footer = () => {
                 right: 0,
                 bottom: 0,
                 background: `
-                    radial-gradient(circle at 30% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
-                    radial-gradient(circle at 70% 20%, rgba(41, 128, 185, 0.1) 0%, transparent 50%)
+                    radial-gradient(circle at 30% 80%, rgba(255, 87, 34, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 20%, rgba(44, 62, 80, 0.1) 0%, transparent 50%)
                 `,
                 opacity: 0.5,
                 zIndex: 1,
@@ -72,7 +72,7 @@ const Footer = () => {
                         marginBottom: '20px'
                     }}>
                         <img
-                            src="/afrimark-logo.png"
+                            src="/afrimark-new-logo.png"
                             alt="Afrimark - Trust is Earned"
                             style={{
                                 width: '100%',
@@ -108,7 +108,7 @@ const Footer = () => {
                         {/*            textDecoration: 'none'*/}
                         {/*        }}*/}
                         {/*        onMouseEnter={(e) => {*/}
-                        {/*            e.target.style.color = '#4CAF50';*/}
+                        {/*            e.target.style.color = '#FF5722';*/}
                         {/*            e.target.style.transform = 'translateY(-5px)';*/}
                         {/*        }}*/}
                         {/*        onMouseLeave={(e) => {*/}

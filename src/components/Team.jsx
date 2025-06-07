@@ -47,8 +47,8 @@ const Team = () => {
                 right: 0,
                 bottom: 0,
                 background: `
-                    radial-gradient(circle at 20% 80%, rgba(76, 175, 80, 0.03) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(41, 128, 185, 0.03) 0%, transparent 50%)
+                    radial-gradient(circle at 20% 80%, rgba(255, 87, 34, 0.03) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(44, 62, 80, 0.03) 0%, transparent 50%)
                 `,
                 opacity: 0.5,
                 zIndex: 1,
@@ -76,7 +76,7 @@ const Team = () => {
                         transform: 'translateX(-50%)',
                         width: '100px',
                         height: '4px',
-                        backgroundColor: '#4CAF50',
+                        backgroundColor: '#FF5722',
                         borderRadius: '2px'
                     }}></div>
                     <h2 style={{
@@ -134,8 +134,8 @@ const Team = () => {
                                 borderRadius: '50%',
                                 marginBottom: '20px',
                                 overflow: 'hidden',
-                                border: '4px solid #4CAF50',
-                                boxShadow: '0 10px 25px rgba(76, 175, 80, 0.2)'
+                                border: '4px solid #FF5722',
+                                boxShadow: '0 10px 25px rgba(255, 87, 34, 0.2)'
                             }}>
                                 <img
                                     src={member.image}
@@ -156,7 +156,7 @@ const Team = () => {
                                 {member.name}
                             </h3>
                             <p style={{
-                                color: '#4CAF50',
+                                color: '#FF5722',
                                 marginBottom: '15px',
                                 fontWeight: 600
                             }}>

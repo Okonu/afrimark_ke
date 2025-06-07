@@ -20,7 +20,7 @@ const StatItem = ({ value, description }) => {
                 fontSize: '3rem',
                 fontWeight: 'bold',
                 marginBottom: '15px',
-                background: 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)',
+                background: 'linear-gradient(135deg, #FF5722 0%, #E64A19 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
             }}>

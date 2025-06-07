@@ -6,9 +6,9 @@ const Header = () => {
 
     const handleNavClick = (e, href) => {
         e.preventDefault();
-        
+
         const currentPath = window.location.pathname;
-        
+
         if (href.startsWith('#')) {
             if (currentPath === '/') {
                 const element = document.querySelector(href);
@@ -17,11 +17,11 @@ const Header = () => {
                 }
             } else {
                 sessionStorage.setItem('scrollTarget', href);
-                
+
                 window.history.pushState({}, '', '/');
-                
+
                 window.dispatchEvent(new CustomEvent('routechange'));
-                
+
                 setTimeout(() => {
                     const element = document.querySelector(href);
                     if (element) {
@@ -39,9 +39,9 @@ const Header = () => {
 
     const handleLogoClick = (e) => {
         e.preventDefault();
-        
+
         const currentPath = window.location.pathname;
-        
+
         if (currentPath !== '/') {
             window.history.pushState({}, '', '/');
             window.dispatchEvent(new CustomEvent('routechange'));
@@ -66,15 +66,16 @@ const Header = () => {
                 margin: '0 auto',
                 backgroundColor: 'rgba(255, 255, 255, 0.9)',
                 borderRadius: '50px',
-                padding: '15px 30px',
+                padding: '10px 20px', // Much smaller padding
                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
                 backdropFilter: 'blur(10px)',
                 display: 'flex',
                 justifyContent: 'space-between',
-                alignItems: 'center'
+                alignItems: 'center',
+                height: '60px' // Fixed smaller height
             }}>
                 <div onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
-                    <Logo layout="horizontal" />
+                    <Logo layout="horizontal" size="large" /> {/* Back to large for bigger logo */}
                 </div>
 
                 <nav style={{
@@ -82,8 +83,8 @@ const Header = () => {
                     gap: '30px',
                     alignItems: 'center'
                 }}>
-                    <a 
-                        href="#features" 
+                    <a
+                        href="#features"
                         onClick={(e) => handleNavClick(e, '#features')}
                         style={{
                             textDecoration: 'none',
@@ -94,7 +95,7 @@ const Header = () => {
                             cursor: 'pointer'
                         }}
                         onMouseEnter={(e) => {
-                            e.target.style.color = '#4CAF50';
+                            e.target.style.color = '#FF5722';
                         }}
                         onMouseLeave={(e) => {
                             e.target.style.color = '#333';
@@ -102,8 +103,8 @@ const Header = () => {
                     >
                         Features
                     </a>
-                    <a 
-                        href="#benefits" 
+                    <a
+                        href="#benefits"
                         onClick={(e) => handleNavClick(e, '#benefits')}
                         style={{
                             textDecoration: 'none',
@@ -114,7 +115,7 @@ const Header = () => {
                             cursor: 'pointer'
                         }}
                         onMouseEnter={(e) => {
-                            e.target.style.color = '#4CAF50';
+                            e.target.style.color = '#FF5722';
                         }}
                         onMouseLeave={(e) => {
                             e.target.style.color = '#333';
@@ -122,8 +123,8 @@ const Header = () => {
                     >
                         Benefits
                     </a>
-                    <a 
-                        href="#about" 
+                    <a
+                        href="#about"
                         onClick={(e) => handleNavClick(e, '#about')}
                         style={{
                             textDecoration: 'none',
@@ -134,7 +135,7 @@ const Header = () => {
                             cursor: 'pointer'
                         }}
                         onMouseEnter={(e) => {
-                            e.target.style.color = '#4CAF50';
+                            e.target.style.color = '#FF5722';
                         }}
                         onMouseLeave={(e) => {
                             e.target.style.color = '#333';

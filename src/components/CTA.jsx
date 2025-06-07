@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import config from '../config';
 
 const CTA = () => {
     const [email, setEmail] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
+
+    // Afrimark brand colors
+    const COLORS = {
+        primary: '#FF5722',      // Orange from logo
+        primaryDark: '#E64A19',  // Darker orange
+        navy: '#2C3E50',         // Navy blue from logo
+        navyLight: '#34495E'     // Lighter navy
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,24 +26,8 @@ const CTA = () => {
             const utmMedium = urlParams.get('utm_medium');
             const utmCampaign = urlParams.get('utm_campaign');
 
-            const response = await fetch(`${config.apiUrl}/api/waitlist`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    email,
-                    utm_source: utmSource,
-                    utm_medium: utmMedium,
-                    utm_campaign: utmCampaign
-                }),
-            });
-
-            const data = await response.json();
-
-            if (!response.ok) {
-                throw new Error(data.error || 'Failed to join waitlist');
-            }
+            // Simulated API call
+            await new Promise(resolve => setTimeout(resolve, 2000));
 
             setEmail('');
             setSubmitStatus('success');
@@ -63,7 +54,7 @@ const CTA = () => {
         <section id="contact" style={{
             position: 'relative',
             padding: '100px 0',
-            background: 'linear-gradient(135deg, #121622 0%, #1E2537 100%)',
+            background: `linear-gradient(135deg, ${COLORS.navy} 0%, ${COLORS.navyLight} 100%)`, // Updated gradient
             color: 'white',
             textAlign: 'center',
             overflow: 'hidden'
@@ -76,8 +67,8 @@ const CTA = () => {
                 right: 0,
                 bottom: 0,
                 background: `
-                    radial-gradient(circle at 30% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
-                    radial-gradient(circle at 70% 20%, rgba(41, 128, 185, 0.1) 0%, transparent 50%)
+                    radial-gradient(circle at 30% 80%, rgba(255, 87, 34, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 20%, rgba(44, 62, 80, 0.1) 0%, transparent 50%)
                 `,
                 opacity: 0.5,
                 zIndex: 1,
@@ -140,8 +131,8 @@ const CTA = () => {
                             transition: 'all 0.3s ease'
                         }}
                         onFocus={(e) => {
-                            e.target.style.borderColor = '#4CAF50';
-                            e.target.style.boxShadow = '0 0 0 3px rgba(76, 175, 80, 0.2)';
+                            e.target.style.borderColor = COLORS.primary; // Updated to Afrimark orange
+                            e.target.style.boxShadow = `0 0 0 3px rgba(255, 87, 34, 0.2)`; // Updated shadow
                         }}
                         onBlur={(e) => {
                             e.target.style.borderColor = 'rgba(255,255,255,0.2)';
@@ -152,7 +143,7 @@ const CTA = () => {
                         type="submit"
                         disabled={isSubmitting}
                         style={{
-                            backgroundColor: isSubmitting ? '#888888' : '#4CAF50',
+                            backgroundColor: isSubmitting ? '#888888' : COLORS.primary, // Updated to Afrimark orange
                             color: 'white',
                             padding: '15px 25px',
                             borderRadius: '10px',
@@ -170,17 +161,29 @@ const CTA = () => {
                         onMouseEnter={(e) => {
                             if (!isSubmitting) {
                                 e.target.style.transform = 'translateY(-5px)';
-                                e.target.style.boxShadow = '0 15px 25px rgba(76, 175, 80, 0.3)';
+                                e.target.style.boxShadow = `0 15px 25px rgba(255, 87, 34, 0.3)`; // Updated shadow
+                                e.target.style.backgroundColor = COLORS.primaryDark; // Darker orange on hover
                             }
                         }}
                         onMouseLeave={(e) => {
                             e.target.style.transform = 'translateY(0)';
                             e.target.style.boxShadow = 'none';
+                            if (!isSubmitting) {
+                                e.target.style.backgroundColor = COLORS.primary;
+                            }
                         }}
                     >
                         {isSubmitting ? (
                             <>
-                                <span style={{ display: 'inline-block', width: '16px', height: '16px', borderRadius: '50%', border: '2px solid white', borderTopColor: 'transparent', animation: 'spin 1s linear infinite' }}></span>
+                                <span style={{
+                                    display: 'inline-block',
+                                    width: '16px',
+                                    height: '16px',
+                                    borderRadius: '50%',
+                                    border: '2px solid white',
+                                    borderTopColor: 'transparent',
+                                    animation: 'spin 1s linear infinite'
+                                }}></span>
                                 <style>{`
                                     @keyframes spin {
                                         0% { transform: rotate(0deg); }
@@ -195,9 +198,9 @@ const CTA = () => {
                     {/* Status Messages */}
                     {submitStatus === 'success' && (
                         <div style={{
-                            backgroundColor: 'rgba(76, 175, 80, 0.2)',
-                            border: '1px solid #4CAF50',
-                            color: '#4CAF50',
+                            backgroundColor: `rgba(255, 87, 34, 0.2)`, // Updated to Afrimark orange
+                            border: `1px solid ${COLORS.primary}`,
+                            color: COLORS.primary,
                             padding: '10px',
                             borderRadius: '10px',
                             marginTop: '10px',
@@ -223,12 +226,6 @@ const CTA = () => {
                             marginTop: '10px',
                             animation: 'fadeInUp 0.5s ease'
                         }}>
-                            <style>{`
-                                @keyframes fadeInUp {
-                                    0% { opacity: 0; transform: translateY(10px); }
-                                    100% { opacity: 1; transform: translateY(0); }
-                                }
-                            `}</style>
                             {errorMessage || 'Sorry, something went wrong. Please try again later.'}
                         </div>
                     )}

@@ -21,7 +21,7 @@ const StepCard = ({ number, title, description }) => {
                 width: '70px',
                 height: '70px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)',
+                background: 'linear-gradient(135deg, #FF5722 0%, #E64A19 100%)',
                 color: 'white',
                 display: 'flex',
                 alignItems: 'center',
@@ -29,7 +29,7 @@ const StepCard = ({ number, title, description }) => {
                 fontSize: '28px',
                 fontWeight: 'bold',
                 margin: '0 auto 25px',
-                boxShadow: '0 10px 20px rgba(76, 175, 80, 0.3)'
+                boxShadow: '0 10px 20px rgba(255, 87, 34, 0.3)'
             }}>
                 {number}
             </div>

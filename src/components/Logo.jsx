@@ -1,20 +1,37 @@
 // Logo.jsx
 import React from 'react';
 
-const Logo = ({ inverted = false, layout = "stacked" }) => {
+const Logo = ({ inverted = false, layout = "stacked", size = "normal" }) => {
+    // Size configurations
+    const sizeConfig = {
+        small: {
+            width: '40px',
+            height: '40px'
+        },
+        normal: {
+            width: '50px',
+            height: '50px'
+        },
+        large: {
+            width: '100px',
+            height: '100px'
+        }
+    };
+
+    const currentSize = sizeConfig[size] || sizeConfig.normal;
+
     if (layout === "horizontal") {
         return (
             <div style={{
                 display: 'flex',
-                alignItems: 'center',
-                gap: '10px'
+                alignItems: 'center'
             }}>
                 <div style={{
-                    width: '50px',
-                    height: '50px'
+                    width: currentSize.width,
+                    height: currentSize.height
                 }}>
                     <img
-                        src="/afrimark-logo.png"
+                        src="/afrimark-new-logo.png"
                         alt="Afrimark Logo"
                         style={{
                             width: '100%',
@@ -23,22 +40,6 @@ const Logo = ({ inverted = false, layout = "stacked" }) => {
                             filter: inverted ? 'brightness(0) invert(1)' : 'none'
                         }}
                     />
-                </div>
-                <div>
-                    <div style={{
-                        fontSize: '20px',
-                        fontWeight: 'bold',
-                        color: inverted ? 'white' : 'black'
-                    }}>
-                        AFRIMARK
-                    </div>
-                    <div style={{
-                        fontSize: '10px',
-                        letterSpacing: '1px',
-                        color: inverted ? 'white' : 'black'
-                    }}>
-                        TRUST IS EARNED
-                    </div>
                 </div>
             </div>
         );
@@ -49,34 +50,20 @@ const Logo = ({ inverted = false, layout = "stacked" }) => {
             textAlign: 'center'
         }}>
             <div style={{
-                maxWidth: '120px',
+                width: currentSize.width,
+                height: currentSize.height,
                 margin: '0 auto'
             }}>
                 <img
-                    src="/afrimark-logo.png"
+                    src="/afrimark-new-logo.png"
                     alt="Afrimark - Trust is Earned"
                     style={{
                         width: '100%',
-                        height: 'auto',
+                        height: '100%',
                         objectFit: 'contain',
                         filter: inverted ? 'brightness(0) invert(1)' : 'none'
                     }}
                 />
-            </div>
-            <div style={{
-                fontSize: '20px',
-                fontWeight: 'bold',
-                marginTop: '10px',
-                color: inverted ? 'white' : 'black'
-            }}>
-                AFRIMARK
-            </div>
-            <div style={{
-                fontSize: '10px',
-                letterSpacing: '1px',
-                color: inverted ? 'white' : 'black'
-            }}>
-                TRUST IS EARNED
             </div>
         </div>
     );

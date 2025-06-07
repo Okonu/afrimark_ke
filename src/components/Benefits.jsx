@@ -34,8 +34,8 @@ const Benefits = () => {
                 right: 0,
                 bottom: 0,
                 background: `
-                    radial-gradient(circle at 20% 80%, rgba(76, 175, 80, 0.03) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(41, 128, 185, 0.03) 0%, transparent 50%)
+                    radial-gradient(circle at 20% 80%, rgba(255, 87, 34, 0.03) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(44, 62, 80, 0.03) 0%, transparent 50%)
                 `,
                 opacity: 0.5,
                 zIndex: 1,
@@ -67,7 +67,7 @@ const Benefits = () => {
                         transform: 'translateX(-50%)',
                         width: '100px',
                         height: '4px',
-                        backgroundColor: '#4CAF50',
+                        backgroundColor: '#FF5722',
                         borderRadius: '2px'
                     }}></div>
                     <h2 style={{
@@ -84,7 +84,7 @@ const Benefits = () => {
                         lineHeight: '1.6',
                         marginBottom: '30px'
                     }}>
-                        We exist to protect <strong style={{color: '#4CAF50'}}>you</strong> and help your business thrive in a market where information is power.
+                        We exist to protect <strong style={{color: '#FF5722'}}>you</strong> and help your business thrive in a market where information is power.
                     </p>
                 </div>
 
@@ -124,7 +124,7 @@ const Benefits = () => {
                                 justifyContent: 'center',
                                 width: '80px',
                                 height: '80px',
-                                backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                                backgroundColor: 'rgba(255, 87, 34, 0.1)',
                                 borderRadius: '50%'
                             }}>
                                 {benefit.icon}

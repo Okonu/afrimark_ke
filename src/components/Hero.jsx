@@ -1,6 +1,14 @@
 import React from 'react';
 
 const Hero = () => {
+    // Afrimark brand colors
+    const COLORS = {
+        primary: '#FF5722',      // Orange from logo
+        primaryDark: '#E64A19',  // Darker orange
+        navy: '#2C3E50',         // Navy blue from logo
+        navyLight: '#34495E'     // Lighter navy
+    };
+
     return (
         <section style={{
             position: 'relative',
@@ -67,14 +75,14 @@ const Hero = () => {
                 }}>
                     <div style={{
                         display: 'inline-block',
-                        backgroundColor: 'rgba(76, 175, 80, 0.2)',
-                        color: '#4CAF50',
+                        backgroundColor: `rgba(255, 87, 34, 0.2)`, // Updated to use Afrimark orange
+                        color: COLORS.primary, // Updated to Afrimark orange
                         padding: '8px 16px',
                         borderRadius: '20px',
                         marginBottom: '20px',
                         fontSize: '0.9rem',
                         fontWeight: 600,
-                        border: '1px solid rgba(76, 175, 80, 0.3)'
+                        border: `1px solid rgba(255, 87, 34, 0.3)` // Updated border
                     }}>
                         Enterprise Trade Intelligence
                     </div>
@@ -106,57 +114,65 @@ const Hero = () => {
                         alignItems: 'center',
                         gap: '20px'
                     }}>
-                        <a href="#contact" style={{
-                            backgroundColor: '#4CAF50',
+                        <button style={{
+                            backgroundColor: COLORS.primary, // Updated to Afrimark orange
                             color: 'white',
                             padding: '14px 30px',
                             borderRadius: '10px',
+                            border: 'none',
                             textDecoration: 'none',
                             fontWeight: 700,
                             fontSize: '1rem',
                             transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-                            boxShadow: '0 10px 20px rgba(76, 175, 80, 0.3)',
+                            boxShadow: `0 10px 20px rgba(255, 87, 34, 0.3)`, // Updated shadow
                             position: 'relative',
                             overflow: 'hidden',
                             transform: 'perspective(1000px) translateZ(0)',
-                            willChange: 'transform'
+                            willChange: 'transform',
+                            cursor: 'pointer'
                         }}
-                           onMouseEnter={(e) => {
-                               e.target.style.transform = 'perspective(1000px) translateY(-10px) translateZ(50px)';
-                               e.target.style.boxShadow = '0 20px 30px rgba(76, 175, 80, 0.4)';
-                           }}
-                           onMouseLeave={(e) => {
-                               e.target.style.transform = 'perspective(1000px) translateY(0) translateZ(0)';
-                               e.target.style.boxShadow = '0 10px 20px rgba(76, 175, 80, 0.3)';
-                           }}>
+                                onMouseEnter={(e) => {
+                                    e.target.style.transform = 'perspective(1000px) translateY(-10px) translateZ(50px)';
+                                    e.target.style.boxShadow = `0 20px 30px rgba(255, 87, 34, 0.4)`; // Updated shadow
+                                    e.target.style.backgroundColor = COLORS.primaryDark; // Darker orange on hover
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.target.style.transform = 'perspective(1000px) translateY(0) translateZ(0)';
+                                    e.target.style.boxShadow = `0 10px 20px rgba(255, 87, 34, 0.3)`;
+                                    e.target.style.backgroundColor = COLORS.primary;
+                                }}>
                             Get Started
-                        </a>
+                        </button>
 
-                        <a href="#features" style={{
+                        <button style={{
                             color: 'white',
                             padding: '14px 30px',
                             borderRadius: '10px',
+                            border: 'none',
                             textDecoration: 'none',
                             fontWeight: 700,
                             fontSize: '1rem',
-                            border: '2px solid rgba(255,255,255,0.3)',
+                            borderWidth: '2px',
+                            borderStyle: 'solid',
+                            borderColor: 'rgba(255,255,255,0.3)',
                             transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                             backgroundColor: 'transparent',
                             transform: 'perspective(1000px) translateZ(0)',
-                            willChange: 'transform'
+                            willChange: 'transform',
+                            cursor: 'pointer'
                         }}
-                           onMouseEnter={(e) => {
-                               e.target.style.backgroundColor = 'rgba(255,255,255,0.1)';
-                               e.target.style.transform = 'perspective(1000px) translateY(-10px) translateZ(50px)';
-                               e.target.style.borderColor = 'rgba(255,255,255,0.5)';
-                           }}
-                           onMouseLeave={(e) => {
-                               e.target.style.backgroundColor = 'transparent';
-                               e.target.style.transform = 'perspective(1000px) translateY(0) translateZ(0)';
-                               e.target.style.borderColor = 'rgba(255,255,255,0.3)';
-                           }}>
+                                onMouseEnter={(e) => {
+                                    e.target.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                                    e.target.style.transform = 'perspective(1000px) translateY(-10px) translateZ(50px)';
+                                    e.target.style.borderColor = 'rgba(255,255,255,0.5)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.target.style.backgroundColor = 'transparent';
+                                    e.target.style.transform = 'perspective(1000px) translateY(0) translateZ(0)';
+                                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                                }}>
                             Learn More
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -170,7 +186,7 @@ const Hero = () => {
                         position: 'absolute',
                         width: '400px',
                         height: '400px',
-                        background: 'linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%)',
+                        background: `linear-gradient(135deg, rgba(255, 87, 34, 0.2) 0%, rgba(44, 62, 80, 0.2) 100%)`, // Updated gradient
                         borderRadius: '50%',
                         filter: 'blur(120px)',
                         top: '50%',

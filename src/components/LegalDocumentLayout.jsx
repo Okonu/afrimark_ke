@@ -76,24 +76,24 @@ const LegalDocumentLayout = ({ data }) => {
                                                     top: '8px',
                                                     width: '4px',
                                                     height: '4px',
-                                                    backgroundColor: '#4CAF50',
+                                                    backgroundColor: '#FF5722',
                                                     borderRadius: '50%'
                                                 }}></span>
-                                                {typeof subItem === 'string' ? subItem : 
-                                                 (subItem.type ? `${subItem.type}: ${subItem.text}` : subItem.text)}
+                                                {typeof subItem === 'string' ? subItem :
+                                                    (subItem.type ? `${subItem.type}: ${subItem.text}` : subItem.text)}
                                             </li>
                                         ))}
                                     </ul>
                                 )}
                                 {item.highlight && (
                                     <div style={{
-                                        backgroundColor: '#e8f5e8',
-                                        border: '1px solid #4CAF50',
+                                        backgroundColor: 'rgba(255, 87, 34, 0.1)',
+                                        border: '1px solid #FF5722',
                                         padding: '12px',
                                         borderRadius: '6px',
                                         marginTop: '10px'
                                     }}>
-                                        <strong style={{ color: '#2e7d32' }}>Key Point: 10 year retention period</strong>
+                                        <strong style={{ color: '#E64A19' }}>Key Point: 10 year retention period</strong>
                                     </div>
                                 )}
                             </div>
@@ -117,7 +117,7 @@ const LegalDocumentLayout = ({ data }) => {
                                     top: '6px',
                                     width: '6px',
                                     height: '6px',
-                                    backgroundColor: '#4CAF50',
+                                    backgroundColor: '#FF5722',
                                     borderRadius: '50%'
                                 }}></span>
                                 {item}
@@ -135,7 +135,7 @@ const LegalDocumentLayout = ({ data }) => {
                                 padding: '16px 20px',
                                 borderRadius: '8px',
                                 marginBottom: '12px',
-                                borderLeft: '4px solid #4CAF50'
+                                borderLeft: '4px solid #FF5722'
                             }}>
                                 <p style={{ ...contentStyles, marginBottom: '0' }}>
                                     <strong style={{ color: '#1a1a2e' }}>{def.number}. "{def.term}"</strong> {def.definition}
@@ -175,7 +175,7 @@ const LegalDocumentLayout = ({ data }) => {
                                                     top: '6px',
                                                     width: '6px',
                                                     height: '6px',
-                                                    backgroundColor: '#4CAF50',
+                                                    backgroundColor: '#FF5722',
                                                     borderRadius: '50%'
                                                 }}></span>
                                                 {item}
@@ -252,7 +252,7 @@ const LegalDocumentLayout = ({ data }) => {
                                                     top: '6px',
                                                     width: '6px',
                                                     height: '6px',
-                                                    backgroundColor: '#4CAF50',
+                                                    backgroundColor: '#FF5722',
                                                     borderRadius: '50%'
                                                 }}></span>
                                                 <strong>{subItem.type}:</strong> {subItem.text}
@@ -274,8 +274,8 @@ const LegalDocumentLayout = ({ data }) => {
                                 borderBottom: index < section.rights.length - 1 ? '1px solid #f0f0f0' : 'none'
                             }}>
                                 <p style={contentStyles}>
-                                    <strong style={{ color: '#1a1a2e' }}>{right.number}.</strong> 
-                                    <span style={{ fontWeight: 600, color: '#2e7d32' }}> {right.title}.</span> {right.description}
+                                    <strong style={{ color: '#1a1a2e' }}>{right.number}.</strong>
+                                    <span style={{ fontWeight: 600, color: '#E64A19' }}> {right.title}.</span> {right.description}
                                 </p>
                             </div>
                         ))}
@@ -362,12 +362,12 @@ const LegalDocumentLayout = ({ data }) => {
             color: '#333'
         }}>
             <Header />
-            
+
             {/* Compact Hero Section */}
             <section style={{
                 paddingTop: '100px',
                 paddingBottom: '40px',
-                background: 'linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%)',
+                background: 'linear-gradient(135deg, #2C3E50 0%, #34495E 100%)',
                 color: 'white'
             }}>
                 <div style={{
@@ -430,7 +430,7 @@ const LegalDocumentLayout = ({ data }) => {
                                 color: '#1a1a2e',
                                 marginBottom: '16px',
                                 paddingBottom: '12px',
-                                borderBottom: '2px solid #4CAF50'
+                                borderBottom: '2px solid #FF5722'
                             }}>
                                 Table of Contents
                             </h3>
@@ -456,7 +456,7 @@ const LegalDocumentLayout = ({ data }) => {
                                             fontSize: '0.85rem',
                                             lineHeight: '1.4',
                                             transition: 'all 0.2s ease',
-                                            backgroundColor: activeSection === section.id ? '#4CAF50' : 'transparent',
+                                            backgroundColor: activeSection === section.id ? '#FF5722' : 'transparent',
                                             color: activeSection === section.id ? 'white' : '#4a4a68',
                                             fontWeight: activeSection === section.id ? 600 : 400
                                         }}
@@ -490,8 +490,8 @@ const LegalDocumentLayout = ({ data }) => {
                     }}>
                         {/* Render all sections */}
                         {sections.map((section, index) => (
-                            <div 
-                                key={section.id} 
+                            <div
+                                key={section.id}
                                 id={section.id}
                                 style={{
                                     marginBottom: index < sections.length - 1 ? '48px' : '0',
